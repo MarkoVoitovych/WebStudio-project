@@ -1,4 +1,8 @@
 .activities {
+  display: none;
+  @media screen and (min-width: $desktop) {
+  display: block;
+}
   background-color: $white-color;
   padding-top: 0;
   &__title {

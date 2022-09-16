@@ -18,6 +18,13 @@
         <div class="container">
             <nav class="site-nav">
                 <a class="logo link" href="./index.html"><span class="logo__decor">Web</span>Studio</a>
+                <button type="button" class="menu-toggle is-open" aria-expanded="false" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобільного меню">
+                        <use class="menu-toggle__icon-menu" href="./images/icons.svg#icon-menu"></use>
+                        <use class="menu-toggle__icon-close" href="./images/icons.svg#icon-close-btn"></use>
+                    </svg>
+                </button>
+                <!-- <div class="menu-container is-open"></div> -->
                 <ul class="site-nav__list list">
                     <li class="site-nav__item item">
                         <a class="site-nav__link link site-nav__link--current" href="./index.html">Студія</a>
@@ -46,15 +53,13 @@
     </header>
     <main class="page-main">
         <section class="hero">
-            <div class="container">
-                <h1 class="hero__title">
-                    Ефективні рішення для<br />
-                    вашого бізнесу
-                </h1>
-                <button data-modal-open class="button hero__button" type="button">
-                    Замовити послугу
-                </button>
-            </div>
+            <h1 class="hero__title">
+                Ефективні рішення для<br />
+                вашого бізнесу
+            </h1>
+            <button data-modal-open class="button hero__button" type="button">
+                Замовити послугу
+            </button>
         </section>
         <section class="section features">
             <div class="container">
@@ -66,7 +71,7 @@
                                 <use href="./images/icons.svg#icon-antenna"></use>
                             </svg>
                         </div>
-                        <h3 class="features__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+                        <h3 class="features__title title">Увага до деталей</h3>
                         <p class="features__text">
                             Ідейні міркування, і навіть початок повсякденної роботи з
                             формування позиції
@@ -78,7 +83,7 @@
                                 <use href="./images/icons.svg#icon-clock"></use>
                             </svg>
                         </div>
-                        <h3 class="features__title">ПУНКТУАЛЬНІСТЬ</h3>
+                        <h3 class="features__title title">Пунктуальність</h3>
                         <p class="features__text">
                             Завдання організації, особливо рамки і місце навчання кадрів
                             тягне у себе.
@@ -90,7 +95,7 @@
                                 <use href="./images/icons.svg#icon-diagram"></use>
                             </svg>
                         </div>
-                        <h3 class="features__title">ПЛАНУВАННЯ</h3>
+                        <h3 class="features__title title">Планування</h3>
                         <p class="features__text">
                             Так само консультація з широким активом значною мірою зумовлює.
                         </p>
@@ -101,7 +106,7 @@
                                 <use href="./images/icons.svg#icon-astronaut"></use>
                             </svg>
                         </div>
-                        <h3 class="features__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                        <h3 class="features__title title">Сучасні технології</h3>
                         <p class="features__text">
                             Значимість цих проблем настільки очевидна, що реалізація
                             планових завдань.
