@@ -18,13 +18,24 @@
         <div class="container">
             <nav class="site-nav">
                 <a class="logo link" href="./index.html"><span class="logo__decor">Web</span>Studio</a>
-                <button type="button" class="menu-toggle is-open" aria-expanded="false" data-menu-button>
+                <button type="button" class="menu-toggle js-open-menu" aria-expanded="false"
+                    aria-controls="mobile-menu">
                     <svg width="40" height="40" aria-label="Переключатель мобільного меню">
                         <use class="menu-toggle__icon-menu" href="./images/icons.svg#icon-menu"></use>
-                        <use class="menu-toggle__icon-close" href="./images/icons.svg#icon-close-btn"></use>
                     </svg>
                 </button>
-                <!-- <div class="menu-container is-open"></div> -->
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle js-close-menu">
+                        <svg width="40" height="40" aria-label="Переключатель мобільного меню">
+                            <use class="menu-toggle__icon-close" href="./images/icons.svg#icon-close-btn"></use>
+                        </svg></button>
+                    <ul class="mobile-menu">
+                        <li><a href="" class="link">About</a></li>
+                        <li><a href="" class="link">Products</a></li>
+                        <li><a href="" class="link">Contacts</a></li>
+                        <li><a href="" class="link">Career</a></li>
+                    </ul>
+                </div>
                 <ul class="site-nav__list list">
                     <li class="site-nav__item item">
                         <a class="site-nav__link link site-nav__link--current" href="./index.html">Студія</a>
@@ -53,13 +64,15 @@
     </header>
     <main class="page-main">
         <section class="hero">
-            <h1 class="hero__title">
-                Ефективні рішення для<br />
-                вашого бізнесу
-            </h1>
-            <button data-modal-open class="button hero__button" type="button">
-                Замовити послугу
-            </button>
+            <div class="hero__container container">
+                <h1 class="hero__title">
+                    Ефективні рішення для<br />
+                    вашого бізнесу
+                </h1>
+                <button data-modal-open class="button hero__button" type="button">
+                    Замовити послугу
+                </button>
+            </div>
         </section>
         <section class="section features">
             <div class="container">
@@ -474,6 +487,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

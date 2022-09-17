@@ -34,7 +34,7 @@
   &__title {
     text-transform: uppercase;
     margin-bottom: 10px;
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) {
       text-align: start;
     }
     color: $primary-text-color;

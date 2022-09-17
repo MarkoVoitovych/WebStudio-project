@@ -1,7 +1,4 @@
 .hero {
-  text-align: center;
-  padding-top: 118px;
-  padding-bottom: 118px;
   background-color: $footer-background-color;
   background-image: linear-gradient(
       to right,
@@ -12,23 +9,50 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 100%;
   @media screen and (min-width: $mobile) {
-  max-width: 480px;
+    max-width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
   }
   margin-left: auto;
   margin-right: auto;
-  &__title {
-    margin-bottom: 30px;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 118px 0px;
+    width: 100%;
+    @media screen and (min-width: $mobile) {
+      width: $mobile;
+    }
+    @media screen and (min-width: $tablet) {
+      width: $tablet;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 200px 0px;
+      width: $desktop;
+    }
+  }
 
+  &__title {
+    display: block;
     color: $white-color;
     font-weight: 900;
     @media screen and (min-width: $mobile) {
       font-size: 26px;
-    line-height: 1.61;
+      line-height: 1.61;
     }
-    @media screen and (min-width: $tablet) {
-    font-size: 44px;
-    line-height: 1.36;
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 1.36;
     }
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -37,11 +61,11 @@
     display: inline-block;
 
     @media screen and (min-width: $mobile) {
-    padding: 10px 24px;
+      padding: 10px 24px;
     }
-     @media screen and (min-width: $tablet) {
-    padding: 10px 32px;
-     }
+    @media screen and (min-width: $tablet) {
+      padding: 10px 32px;
+    }
     color: $white-color;
     background-color: $accent-color;
     font-weight: 700;
@@ -49,12 +73,4 @@
     line-height: 1.88;
     letter-spacing: 0.06em;
   }
-  @media screen and (min-width: $mobile) {
-    width: 480px;
-    }
-  @media screen and (min-width: $tablet) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-     max-width: 1600px;
-    }
-  }
+}
