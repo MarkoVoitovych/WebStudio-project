@@ -6,6 +6,9 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+body.modal-open {
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -32,8 +35,12 @@ p {
   color: inherit;
 }
 .container {
+  // @media screen and (max-width: 319px) {
+  //   width: 320px;
+  //   overflow-x: scroll;
+  // }
   width: 100%;
-  min-width: 320px;
+
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;

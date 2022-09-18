@@ -1,5 +1,5 @@
 .logo {
-  display: inline-flex;
+  display: inline-block;
   color: $black-color;
   text-decoration: none;
   font-family: Raleway, sans-serif;
@@ -10,7 +10,6 @@
     color: $accent-color;
   }
   .footer & {
-    display: inline-block;
     margin-bottom: 20px;
     color: $white-color;
   }
