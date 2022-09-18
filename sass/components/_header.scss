@@ -69,12 +69,14 @@
 .auth-nav {
   display: flex;
   align-items: start;
+  justify-content: start;
   flex-direction: column-reverse;
   gap: 30px;
   @media screen and (min-width: $tablet) {
     margin-left: auto;
     justify-content: center;
     gap: 10px;
+    flex-direction: column;
   }
   @media screen and (min-width: $desktop) {
     align-items: center;
@@ -113,7 +115,7 @@
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 0.02em;
-    text-align: center;
+    text-align: start;
     @media screen and (min-width: $tablet) {
       color: $secondary-text-color;
       gap: 8px;
@@ -140,15 +142,39 @@
   &__socials {
     display: flex;
     @media screen and (min-width: $tablet) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
       display: none;
     }
+    flex-wrap: wrap;
+    gap: 20px;
   }
   &__social-item {
+    position: relative;
     display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
-    &:not(:last-child) {
-      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background-color: rgba(33, 33, 33, 0.2);
+      right: -10px;
     }
   }
 }
