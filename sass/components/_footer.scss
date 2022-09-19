@@ -91,6 +91,7 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 100%;
     @media screen and (max-width: 1199px) {
       margin-right: auto;
       margin-left: auto;
@@ -191,7 +192,8 @@
     @media screen and (min-width: $desktop) {
       gap: 10px;
     }
-    width: 200px;
+    max-width: 200px;
+    padding: 10px 28px;
     height: 50px;
     cursor: pointer;
     color: $white-color;

@@ -3,9 +3,6 @@
 }
 .portfolio .filter {
   display: flex;
-  // @media screen and (max-width: 767px) {
-  //   width: 95%;
-  // }
   @media screen and (min-width: $tablet) {
     justify-content: center;
   }

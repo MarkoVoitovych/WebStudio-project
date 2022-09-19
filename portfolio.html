@@ -17,16 +17,14 @@
     <header class="header">
         <div class="container">
             <a class="logo link" href="./index.html"><span class="logo__decor">Web</span>Studio</a>
-            <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <button type="button" class="menu-toggle" data-menu-button aria-expanded="false"
+                aria-controls="menu-container">
                 <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                    <use class="menu-toggle__icon-close" href="./images/icons.svg#icon-close-btn"></use>
                     <use class="menu-toggle__icon-menu" href="./images/icons.svg#icon-menu"></use>
                 </svg>
             </button>
-            <div class="menu-container js-menu-container is-open" id="mobile-menu">
-                <button class="menu-toggle js-close-menu">
-                    <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-                        <use class="menu-toggle__icon-close" href="./images/icons.svg#icon-close-btn"></use>
-                    </svg></button>
+            <div class="menu-container is-open" id="menu-container" data-menu>
                 <nav class="site-nav">
                     <ul class="site-nav__list list">
                         <li class="site-nav__item item">
@@ -35,24 +33,30 @@
                         <li class="site-nav__item item">
                             <a class="site-nav__link link site-nav__link--current" href="./portfolio.html">Портфоліо</a>
                         </li>
-                        <li class="site-nav__item item"><a class="site-nav__link link" href="">Контакти</a></li>
+                        <li class="site-nav__item item">
+                            <a class="site-nav__link link" href="">Контакти</a>
+                        </li>
                     </ul>
                 </nav>
                 <ul class="auth-nav list">
                     <li class="auth-nav__item item">
                         <ul class="auth-nav__socials list">
-                            <li class="auth-nav__social-item item"><a href="" class="link auth-nav__social-link"
-                                    aria-label="Інстаграм" target="_blank"
-                                    rel="noopener nofollow noreferrer">Instagram</a></li>
-                            <li class="auth-nav__social-item item"><a href="" class="link auth-nav__social-link"
-                                    aria-label="Твіттер" target="_blank" rel="noopener nofollow noreferrer">Twitter</a>
+                            <li class="auth-nav__social-item item">
+                                <a href="" class="link auth-nav__social-link" aria-label="Інстаграм" target="_blank"
+                                    rel="noopener nofollow noreferrer">Instagram</a>
                             </li>
-                            <li class="auth-nav__social-item item"><a href="" class="link auth-nav__social-link"
-                                    aria-label="Фейсбук" target="_blank" rel="noopener nofollow noreferrer">Facebook</a>
+                            <li class="auth-nav__social-item item">
+                                <a href="" class="link auth-nav__social-link" aria-label="Твіттер" target="_blank"
+                                    rel="noopener nofollow noreferrer">Twitter</a>
                             </li>
-                            <li class="auth-nav__social-item item"><a href="" class="link auth-nav__social-link"
-                                    aria-label="Лінкедин" target="_blank"
-                                    rel="noopener nofollow noreferrer">LinkedIn</a></li>
+                            <li class="auth-nav__social-item item">
+                                <a href="" class="link auth-nav__social-link" aria-label="Фейсбук" target="_blank"
+                                    rel="noopener nofollow noreferrer">Facebook</a>
+                            </li>
+                            <li class="auth-nav__social-item item">
+                                <a href="" class="link auth-nav__social-link" aria-label="Лінкедин" target="_blank"
+                                    rel="noopener nofollow noreferrer">LinkedIn</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="auth-nav__item item">
@@ -68,10 +72,8 @@
                             </svg>+38 096 111 11 11</a>
                     </li>
                 </ul>
-
             </div>
         </div>
-
     </header>
     <main class="portfolio">
         <div class="container">
@@ -79,26 +81,55 @@
                 <h1 class="projects__title title--hidden">Перелік робіт</h1>
                 <h2 class="filter__title title--hidden">Фільтр робіт</h2>
                 <ul class="filter list">
-                    <li class="filter__item item"><button class="filter__button button" type="button">Усі</button></li>
-                    <li class="filter__item item"><button class="filter__button button" type="button">Веб-сайти</button>
+                    <li class="filter__item item">
+                        <button class="filter__button button" type="button">Усі</button>
                     </li>
-                    <li class="filter__item item"><button class="filter__button button" type="button">Додатки</button>
+                    <li class="filter__item item">
+                        <button class="filter__button button" type="button">
+                            Веб-сайти
+                        </button>
                     </li>
-                    <li class="filter__item item"><button class="filter__button button" type="button">Дизайн</button>
+                    <li class="filter__item item">
+                        <button class="filter__button button" type="button">
+                            Додатки
+                        </button>
                     </li>
-                    <li class="filter__item item"><button class="filter__button button" type="button">Маркетинг</button>
+                    <li class="filter__item item">
+                        <button class="filter__button button" type="button">
+                            Дизайн
+                        </button>
+                    </li>
+                    <li class="filter__item item">
+                        <button class="filter__button button" type="button">
+                            Маркетинг
+                        </button>
                     </li>
                 </ul>
                 <ul class="list projects__list">
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-1.jpg"
-                                    alt="Фото працівників компанії Технокряк" width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-1-desk.jpg    1x,
+                        ./images/proj-1-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-1-tab.jpg    1x,
+                        ./images/proj-1-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-1-mob.jpg    1x,
+                        ./images/proj-1-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-1-desk.jpg"
+                                        alt="Фото працівників компанії Технокряк" width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Технокряк</h3>
@@ -109,15 +140,32 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-2.jpg"
-                                    alt="Двоє чоловіків грають в баскетбол" width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-2-desk.jpg    1x,
+                        ./images/proj-2-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-2-tab.jpg    1x,
+                        ./images/proj-2-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-2-mob.jpg    1x,
+                        ./images/proj-2-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-2-desk.jpg"
+                                        alt="Двоє чоловіків грають в баскетбол" width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
-                                <h3 class="project__title">Постер New Orlean vs Golden Star</h3>
+                                <h3 class="project__title">
+                                    Постер New Orlean vs Golden Star
+                                </h3>
                                 <p class="project__text">Дизайн</p>
                             </div>
                         </a>
@@ -125,12 +173,27 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-3.jpg"
-                                    alt="Логотип ресторану у вигляді рибини" width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-3-desk.jpg    1x,
+                        ./images/proj-3-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-3-tab.jpg    1x,
+                        ./images/proj-3-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-3-mob.jpg    1x,
+                        ./images/proj-3-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-3-desk.jpg"
+                                        alt="Логотип ресторану у вигляді рибини" width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Ресторан Seafood</h3>
@@ -141,12 +204,27 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-4.jpg" alt="Чорні навушники"
-                                    width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-4-desk.jpg    1x,
+                        ./images/proj-4-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-4-tab.jpg    1x,
+                        ./images/proj-4-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-4-mob.jpg    1x,
+                        ./images/proj-4-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-4-desk.jpg" alt="Чорні навушники"
+                                        width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Проєкт Prime</h3>
@@ -157,12 +235,27 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-5.jpg"
-                                    alt="Дві коробки, біла і коричнева" width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-5-desk.jpg    1x,
+                        ./images/proj-5-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-5-tab.jpg    1x,
+                        ./images/proj-5-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-5-mob.jpg    1x,
+                        ./images/proj-5-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-5-desk.jpg"
+                                        alt="Дві коробки, біла і коричнева" width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Проєкт Boxes</h3>
@@ -173,12 +266,27 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-6.jpg" alt="Дисплей комп'ютера"
-                                    width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-6-desk.jpg    1x,
+                        ./images/proj-6-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-6-tab.jpg    1x,
+                        ./images/proj-6-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-6-mob.jpg    1x,
+                        ./images/proj-6-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-6-desk.jpg" alt="Дисплей комп'ютера"
+                                        width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Inspiration has no Borders</h3>
@@ -189,12 +297,27 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-7.jpg" alt="Розгорнутий журнал"
-                                    width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-7-desk.jpg    1x,
+                        ./images/proj-7-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-7-tab.jpg    1x,
+                        ./images/proj-7-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-7-mob.jpg    1x,
+                        ./images/proj-7-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-7-desk.jpg" alt="Розгорнутий журнал"
+                                        width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Видання Limited Edition</h3>
@@ -205,12 +328,27 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-8.jpg" alt="Біла візитка" width="370"
-                                    height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-8-desk.jpg    1x,
+                        ./images/proj-8-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-8-tab.jpg    1x,
+                        ./images/proj-8-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-8-mob.jpg    1x,
+                        ./images/proj-8-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-8-desk.jpg" alt="Біла візитка"
+                                        width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Проєкт LAB</h3>
@@ -221,12 +359,27 @@
                     <li class="project item">
                         <a class="project__link link" href="">
                             <div class="project__thumb">
-                                <img class="project__foto" src="./images/our-work-9.jpg"
-                                    alt="Людина працює за ноутбуком" width="370" height="294">
-                                <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем
-                                    функціоналу та
-                                    сервісів. Все це дозволить відвідувачу отримати
-                                    вичерпні відомості про компанію чи приватну особу.</p>
+                                <picture>
+                                    <source srcset="
+                        ./images/proj-9-desk.jpg    1x,
+                        ./images/proj-9-desk-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                                    <source srcset="
+                        ./images/proj-9-tab.jpg    1x,
+                        ./images/proj-9-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                                    <source srcset="
+                        ./images/proj-9-mob.jpg    1x,
+                        ./images/proj-9-mob-2x.jpg 2x
+                      " media="(max-width: 767px)" />
+                                    <img class="project__foto" src="./images/proj-9-desk.jpg"
+                                        alt="Людина працює за ноутбуком" width="450" />
+                                </picture>
+                                <p class="project__description">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                                    функціоналу та сервісів. Все це дозволить відвідувачу
+                                    отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
                             </div>
                             <div class="project__box">
                                 <h3 class="project__title">Growing Business</h3>
@@ -291,10 +444,12 @@
                     <div class="subscribe__box">
                         <input class="subscribe__input" type="email" id="email" name="user-email"
                             placeholder="E-mail" />
-                        <button type="submit" class="button subscribe__button">Підписатися <svg class="subscribe__icon"
-                                width="24" height="24">
+                        <button type="submit" class="button subscribe__button">
+                            Підписатися
+                            <svg class="subscribe__icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-send" />
-                            </svg></button>
+                            </svg>
+                        </button>
                     </div>
                 </form>
             </div>
