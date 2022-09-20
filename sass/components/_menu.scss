@@ -8,7 +8,10 @@
   @media (max-width: 767px) {
     height: 100vh;
   }
-  padding: 48px 40px;
+  padding: 36px 30px;
+  @media (min-width: $mobile) {
+    padding: 48px 40px;
+  }
   background-color: $white-color;
   display: flex;
   flex-direction: column;

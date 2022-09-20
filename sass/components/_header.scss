@@ -16,7 +16,10 @@
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
+    @media screen and (min-width: $mobile) {
+      gap: 32px;
+    }
     @media screen and (min-width: $tablet) {
       gap: 50px;
       margin-left: 88px;
@@ -33,7 +36,10 @@
   &__link {
     display: block;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 30px;
+    @media screen and (min-width: $tablet) {
+      font-size: 40px;
+    }
     letter-spacing: 0.02em;
     line-height: 1.18;
     @media screen and (min-width: $tablet) {
@@ -69,7 +75,10 @@
   align-items: start;
   justify-content: start;
   flex-direction: column-reverse;
-  gap: 30px;
+  gap: 16px;
+  @media screen and (min-width: $mobile) {
+    gap: 32px;
+  }
   @media screen and (min-width: $tablet) {
     margin-left: auto;
     justify-content: center;
@@ -92,22 +101,35 @@
     }
     @media screen and (max-width: 767px) {
       &:nth-child(3) {
-        font-size: 34px;
+        font-size: 24px;
+        @media screen and (min-width: $mobile) {
+          font-size: 34px;
+        }
         line-height: 1.18;
         color: $accent-color;
       }
       &:nth-child(2) {
-        font-size: 24px;
+        font-size: 18px;
+        @media screen and (min-width: $mobile) {
+          font-size: 24px;
+        }
         line-height: 1.17;
         color: $secondary-text-color;
       }
       &:nth-child(1) {
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 14px;
+        @media screen and (min-width: $mobile) {
+          font-size: 18px;
+        }
         line-height: 1.22;
         letter-spacing: 0.02em;
         color: $accent-color;
+        margin-top: 16px;
+        @media screen and (min-width: $mobile) {
+          margin-top: 32px;
+        }
       }
     }
   }
@@ -159,7 +181,10 @@
       display: none;
     }
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    @media screen and (min-width: $mobile) {
+      gap: 20px;
+    }
   }
   &__social-item {
     position: relative;
