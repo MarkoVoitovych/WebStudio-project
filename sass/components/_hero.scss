@@ -108,10 +108,7 @@
   }
   &__button {
     display: inline-block;
-
-    @media screen and (min-width: $mobile) {
-      padding: 10px 24px;
-    }
+    padding: 10px 24px;
     @media screen and (min-width: $tablet) {
       padding: 10px 32px;
     }

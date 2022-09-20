@@ -17,12 +17,10 @@
     align-items: start;
     flex-direction: column;
     gap: 32px;
-    padding-bottom: 302px;
     @media screen and (min-width: $tablet) {
       gap: 50px;
       margin-left: 88px;
       flex-direction: row;
-      padding-bottom: 0px;
     }
     @media screen and (min-width: $desktop) {
       margin-left: 93px;
@@ -110,7 +108,6 @@
         line-height: 1.22;
         letter-spacing: 0.02em;
         color: $accent-color;
-        margin-top: 32px;
       }
     }
   }
@@ -148,6 +145,7 @@
     }
   }
   &__socials {
+    padding: 0;
     display: flex;
     @media screen and (min-width: $tablet) {
       position: absolute;
@@ -178,6 +176,7 @@
     }
     &:not(:last-child)::after {
       content: "";
+      padding: 0;
       position: absolute;
       height: 100%;
       width: 2px;

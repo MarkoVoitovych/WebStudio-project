@@ -5,10 +5,14 @@
   left: 0;
   width: 100%;
   max-width: 100%;
+  @media (max-width: 767px) {
+    height: 100vh;
+  }
   padding: 48px 40px;
   background-color: $white-color;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   @media (min-width: $tablet) {
     position: relative;
     padding: 0px;
